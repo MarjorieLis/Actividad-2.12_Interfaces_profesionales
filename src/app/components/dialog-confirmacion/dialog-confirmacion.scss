@@ -1,0 +1,58 @@
+.dialog-icon {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.dialog-content {
+  padding: 24px 24px 0;
+}
+
+.warning-text {
+  color: #f44336;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.dialog-actions {
+  padding: 16px 24px 24px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  
+  strong {
+    color: rgba(0, 0, 0, 0.87);
+    margin-right: 16px;
+  }
+  
+  span {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: right;
+  }
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+}
+
+@media (max-width: 600px) {
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    span {
+      text-align: left;
+      margin-top: 4px;
+    }
+  }
+}

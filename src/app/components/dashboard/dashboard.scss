@@ -1,0 +1,39 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #ffffff;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 
+              0 6px 10px 0 rgba(0, 0, 0, 0.14), 
+              0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.toolbar-title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.content {
+  padding: 20px;
+  min-height: calc(100vh - 64px);
+}
+
+.mat-mdc-list-item.active {
+  background-color: rgba(0, 0, 0, 0.04);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .sidenav {
+    width: 200px;
+  }
+}

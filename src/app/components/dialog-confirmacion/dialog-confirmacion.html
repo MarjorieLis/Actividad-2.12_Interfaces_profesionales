@@ -1,0 +1,55 @@
+@if(data.tipo === 'eliminar') {
+  <!-- Diálogo de Confirmación de Eliminación -->
+  <h2 mat-dialog-title>
+    <mat-icon color="warn" class="dialog-icon">warning</mat-icon>
+    Confirmar Eliminación
+  </h2>
+  
+  <mat-dialog-content class="dialog-content">
+    <p>¿Está seguro que desea eliminar al usuario <strong>{{data.nombre}}</strong>?</p>
+    <p class="warning-text">Esta acción no se puede deshacer.</p>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions align="end" class="dialog-actions">
+    <button mat-button mat-dialog-close (click)="onNoClick()">
+      <mat-icon>cancel</mat-icon>
+      Cancelar
+    </button>
+    <button mat-raised-button color="warn" (click)="onYesClick()">
+      <mat-icon>delete</mat-icon>
+      Eliminar
+    </button>
+  </mat-dialog-actions>
+} @else {
+  <!-- Diálogo de Detalles del Usuario -->
+  <h2 mat-dialog-title>
+    <mat-icon color="primary" class="dialog-icon">person</mat-icon>
+    Detalles del Usuario
+  </h2>
+  
+  <mat-dialog-content class="dialog-content">
+    <div class="detail-item">
+      <strong>Nombre:</strong>
+      <span>{{data.nombre}}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Email:</strong>
+      <span>{{data.email}}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Rol:</strong>
+      <span>{{data.rol}}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Fecha de Nacimiento:</strong>
+      <span>{{formatDate(data.fechaNacimiento)}}</span>
+    </div>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions align="end" class="dialog-actions">
+    <button mat-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+      Cerrar
+    </button>
+  </mat-dialog-actions>
+}

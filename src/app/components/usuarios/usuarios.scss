@@ -1,0 +1,59 @@
+.table-card {
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+              0 6px 10px 0 rgba(0, 0, 0, 0.14),
+              0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+mat-card-header {
+  padding: 24px;
+}
+
+mat-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+mat-card-subtitle {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.table-toolbar {
+  padding: 16px 0;
+}
+
+.filter-field {
+  width: 300px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-cell,
+.mat-mdc-header-cell {
+  padding: 16px 8px;
+}
+
+.mat-mdc-row:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 600px) {
+  .table-card {
+    margin: 20px;
+  }
+  
+  .filter-field {
+    width: 100%;
+  }
+}
